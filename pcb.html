@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCB Engineering | ArtySpace</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(rgba(10, 15, 26, 0.9), rgba(10, 15, 26, 0.9)),
+                url("background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #e6faff;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 195, 255, 0.3);
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    color: #00c3ff;
+    letter-spacing: 2px;
+}
+
+.back {
+    text-decoration: none;
+    color: #8fdfff;
+    font-size: 14px;
+}
+
+.back:hover {
+    color: #00c3ff;
+}
+
+.section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.section h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00c3ff;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: rgba(0, 195, 255, 0.05);
+    border: 1px solid rgba(0, 195, 255, 0.2);
+    padding: 30px;
+    margin: 30px auto;
+    border-radius: 8px;
+    max-width: 700px;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    border-color: #00c3ff;
+    box-shadow: 0 0 20px rgba(0, 195, 255, 0.3);
+}
+
+.button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 28px;
+    border: 1px solid #00c3ff;
+    color: #00c3ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background-color: #00c3ff;
+    color: #0a0f1a;
+    box-shadow: 0 0 20px #00c3ff;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ArtySpace</div>
+    <a href="index.html" class="back">← Back to Home</a>
+</header>
+
+<section class="section">
+    <h1>Custom PCB Engineering</h1>
+
+    <div class="card">
+        <p>
+            At ArtySpace, students are trained to design mission-ready printed circuit boards 
+            for rocket avionics systems. We cover schematic development, component selection, 
+            signal routing, power regulation, and safety isolation for high-reliability aerospace applications.
+        </p>
+
+        <p style="margin-top:20px;">
+            Once designs are validated, we guide students to professional-grade manufacturing 
+            partners for precision fabrication.
+        </p>
+
+        <a href="https://jlcpcb.com/" target="_blank" class="button">
+            Manufacture Your PCB
+        </a>
+    </div>
+
+</section>
+
+</body>
+</html>
