@@ -97,6 +97,57 @@ header {
     box-shadow: 0 0 45px rgba(0, 195, 255, 0.6);
 }
 
+.rocket-wrapper {
+    position: relative;
+    display: inline-block;
+    border-radius: 16px;
+}
+
+.rocket-wrapper img {
+    display: block;
+    width: 320px;
+    border-radius: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Neon Animated Border */
+.rocket-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: -3px; /* thickness of neon border */
+    border-radius: 18px;
+    background: linear-gradient(
+        90deg,
+        #00f7ff,
+        #960aa8,
+        #bff3dd
+    );
+    background-size: 300% 300%;
+    animation: neonBorderFlow 4s linear infinite;
+    filter: blur(8px);
+    z-index: 1;
+}
+
+/* Dark inner background so glow stays outside */
+.rocket-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    background: #0a0f1a;
+    z-index: 1;
+}
+
+@keyframes neonBorderFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 300% 50%;
+    }
+}
+
 .neon-line {
     position: absolute;
     width: 1100px;
@@ -183,7 +234,7 @@ header {
 
 <header>
     <div class="logo">ArtySpace</div>
-    <div class="username">Founder: Pratheepp</div>
+    <div class="username">Founder: Pratheep</div>
 </header>
 
 <section class="hero">
@@ -204,7 +255,9 @@ header {
     </div>
 
     <div class="hero-right">
-        <img src="rocket.png" alt="ArtySpace Rocket">
+        <div class="rocket-wrapper">
+            <img src="rocket.png" alt="ArtySpace Rocket">
+        </div>
     </div>
 
 </section>
